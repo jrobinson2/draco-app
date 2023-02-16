@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 
-import { THEMES } from "../constants";
+import { THEMES } from '../constants';
 
 const initialState = {
   theme: THEMES.DEFAULT,
@@ -16,7 +16,7 @@ function ThemeProvider({ children }: ThemeProviderProps) {
   const [theme, _setTheme] = React.useState<string>(initialState.theme);
 
   useEffect(() => {
-    const storedTheme = localStorage.getItem("theme");
+    const storedTheme = localStorage.getItem('theme');
 
     if (storedTheme) {
       _setTheme(JSON.parse(storedTheme));
@@ -24,7 +24,7 @@ function ThemeProvider({ children }: ThemeProviderProps) {
   }, []);
 
   const setTheme = (theme: string) => {
-    localStorage.setItem("theme", JSON.stringify(theme));
+    localStorage.setItem('theme', JSON.stringify(theme));
     _setTheme(theme);
   };
 

@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "@emotion/styled";
+import React from 'react';
+import styled from '@emotion/styled';
 
-import { Typography } from "@mui/material";
+import { Typography } from '@mui/material';
 
-import { SidebarItemsType } from "../../types/sidebar";
-import SidebarNavList from "./SidebarNavList";
+import { SidebarItemsType } from '../../types/sidebar';
+import SidebarNavList from './SidebarNavList';
 
 const Title = styled(Typography)`
   color: ${(props) => props.theme.sidebar.color};
@@ -28,7 +28,7 @@ const SidebarNavSection: React.FC<SidebarNavSectionProps> = (props) => {
     title,
     pages,
     className,
-    component: Component = "nav",
+    component: Component = 'nav',
     ...rest
   } = props;
 

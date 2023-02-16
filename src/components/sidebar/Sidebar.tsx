@@ -1,13 +1,13 @@
-import React from "react";
-import styled from "@emotion/styled";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import styled from '@emotion/styled';
+import { NavLink } from 'react-router-dom';
 
-import { Box, Drawer as MuiDrawer, ListItemButton } from "@mui/material";
+import { Box, Drawer as MuiDrawer, ListItemButton } from '@mui/material';
 
-import { ReactComponent as Logo } from "../../vendor/vite.svg";
-import { SidebarItemsType } from "../../types/sidebar";
-import Footer from "./SidebarFooter";
-import SidebarNav from "./SidebarNav";
+import { ReactComponent as Logo } from '../../vendor/vite.svg';
+import { SidebarItemsType } from '../../types/sidebar';
+import Footer from './SidebarFooter';
+import SidebarNav from './SidebarNav';
 
 const Drawer = styled(MuiDrawer)`
   border-right: 0;
@@ -33,7 +33,7 @@ const Brand = styled(ListItemButton)<{
   cursor: pointer;
   flex-grow: 0;
 
-  ${(props) => props.theme.breakpoints.up("sm")} {
+  ${(props) => props.theme.breakpoints.up('sm')} {
     min-height: 64px;
   }
 
@@ -56,7 +56,7 @@ export type SidebarProps = {
       width: number;
     };
   };
-  variant?: "permanent" | "persistent" | "temporary";
+  variant?: 'permanent' | 'persistent' | 'temporary';
   open?: boolean;
   onClose?: () => void;
   items: {

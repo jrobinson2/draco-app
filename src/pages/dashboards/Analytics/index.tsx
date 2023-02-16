@@ -1,17 +1,17 @@
-import React from "react";
-import styled from "@emotion/styled";
-import { Helmet } from "react-helmet-async";
+import React from 'react';
+import styled from '@emotion/styled';
+import { Helmet } from 'react-helmet-async';
 
 import {
   Grid,
   Divider as MuiDivider,
   Typography as MuiTypography,
-} from "@mui/material";
-import { spacing } from "@mui/system";
-import { green, red } from "@mui/material/colors";
+} from '@mui/material';
+import { spacing } from '@mui/system';
+import { green, red } from '@mui/material/colors';
 
-import Actions from "./Actions";
-import Stats from "./Stats";
+import Actions from './Actions';
+import Stats from './Stats';
 
 const Divider = styled(MuiDivider)(spacing);
 
@@ -29,7 +29,7 @@ function Default() {
           <Typography variant="subtitle1">
             <span role="img" aria-label="Robot">
               🤖
-            </span>{" "}
+            </span>{' '}
             Hello
             <span role="img" aria-label="Waving Hand Sign">
               👋

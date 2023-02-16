@@ -1,15 +1,15 @@
-import React from "react";
-import styled from "@emotion/styled";
-import { css } from "@emotion/react";
-import ReactPerfectScrollbar from "react-perfect-scrollbar";
-import { List } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
+import React from 'react';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
+import ReactPerfectScrollbar from 'react-perfect-scrollbar';
+import { List } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
-import { SidebarItemsType } from "../../types/sidebar";
-import SidebarNavSection from "./SidebarNavSection";
+import { SidebarItemsType } from '../../types/sidebar';
+import SidebarNavSection from './SidebarNavSection';
 
-import "../../vendor/perfect-scrollbar.css";
+import '../../vendor/perfect-scrollbar.css';
 
 const baseScrollbar = (props: any) => css`
   background-color: ${props.theme.sidebar.background};
@@ -39,7 +39,7 @@ type SidebarNavProps = {
 
 const SidebarNav: React.FC<SidebarNavProps> = ({ items }) => {
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up("md"));
+  const matches = useMediaQuery(theme.breakpoints.up('md'));
   const ScrollbarComponent = (
     matches ? PerfectScrollbar : Scrollbar
   ) as React.ElementType;

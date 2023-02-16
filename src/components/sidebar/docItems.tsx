@@ -1,4 +1,4 @@
-import { SidebarItemsType } from "../../types/sidebar";
+import { SidebarItemsType } from '../../types/sidebar';
 
 import {
   ArrowRightCircle,
@@ -10,117 +10,117 @@ import {
   Mail,
   Shield,
   Users,
-} from "react-feather";
+} from 'react-feather';
 
 const gettingStartedSection = [
   {
-    href: "/documentation/welcome",
+    href: '/documentation/welcome',
     icon: Info,
-    title: "Welcome",
+    title: 'Welcome',
   },
   {
-    href: "/documentation/getting-started",
+    href: '/documentation/getting-started',
     icon: Code,
-    title: "Getting Started",
+    title: 'Getting Started',
   },
 ] as SidebarItemsType[];
 
 const developmentSection = [
   {
-    href: "/documentation/routing",
+    href: '/documentation/routing',
     icon: ArrowRightCircle,
-    title: "Routing",
+    title: 'Routing',
   },
   {
-    href: "/documentation/auth",
+    href: '/documentation/auth',
     icon: Users,
-    title: "Authentication",
+    title: 'Authentication',
     children: [
       {
-        href: "/documentation/auth/auth0",
-        title: "Auth0",
+        href: '/documentation/auth/auth0',
+        title: 'Auth0',
       },
       {
-        href: "/documentation/auth/cognito",
-        title: "Cognito",
+        href: '/documentation/auth/cognito',
+        title: 'Cognito',
       },
       {
-        href: "/documentation/auth/firebase",
-        title: "Firebase",
+        href: '/documentation/auth/firebase',
+        title: 'Firebase',
       },
       {
-        href: "/documentation/auth/jwt",
-        title: "JWT",
+        href: '/documentation/auth/jwt',
+        title: 'JWT',
       },
     ],
   },
   {
-    href: "/documentation/guards",
+    href: '/documentation/guards',
     icon: Shield,
-    title: "Guards",
+    title: 'Guards',
   },
   {
-    href: "/documentation/theming",
+    href: '/documentation/theming',
     icon: Droplet,
-    title: "Theming",
+    title: 'Theming',
   },
   {
-    href: "/documentation/api-calls",
+    href: '/documentation/api-calls',
     icon: ArrowRightCircle,
-    title: "API Calls",
+    title: 'API Calls',
   },
   {
-    href: "/documentation/redux",
+    href: '/documentation/redux',
     icon: ArrowRightCircle,
-    title: "Redux",
+    title: 'Redux',
   },
   {
-    href: "/documentation/internationalization",
+    href: '/documentation/internationalization',
     icon: Globe,
-    title: "Internationalization",
+    title: 'Internationalization',
   },
   {
-    href: "/documentation/environment-variables",
+    href: '/documentation/environment-variables',
     icon: ArrowRightCircle,
-    title: "Environment Variables",
+    title: 'Environment Variables',
   },
   {
-    href: "/documentation/eslint-and-prettier",
+    href: '/documentation/eslint-and-prettier',
     icon: ArrowRightCircle,
-    title: "ESLint & Prettier",
+    title: 'ESLint & Prettier',
   },
   {
-    href: "/documentation/deployment",
+    href: '/documentation/deployment',
     icon: ArrowRightCircle,
-    title: "Deployment",
+    title: 'Deployment',
   },
 ] as SidebarItemsType[];
 
 const supportSection = [
   {
-    href: "/documentation/support",
+    href: '/documentation/support',
     icon: Mail,
-    title: "Support",
+    title: 'Support',
   },
   {
-    href: "/changelog",
+    href: '/changelog',
     icon: List,
-    title: "Changelog",
-    badge: "v4.2.1",
+    title: 'Changelog',
+    badge: 'v4.2.1',
   },
 ] as SidebarItemsType[];
 
 const navItems = [
   {
-    title: "Getting started",
+    title: 'Getting started',
     pages: gettingStartedSection,
   },
   {
-    title: "Development",
+    title: 'Development',
     pages: developmentSection,
   },
   {
-    title: "Help",
+    title: 'Help',
     pages: supportSection,
   },
 ];

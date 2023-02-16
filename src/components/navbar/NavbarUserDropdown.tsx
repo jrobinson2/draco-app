@@ -1,13 +1,13 @@
-import React from "react";
-import styled from "@emotion/styled";
-import { Power } from "react-feather";
+import React from 'react';
+import styled from '@emotion/styled';
+import { Power } from 'react-feather';
 
 import {
   Tooltip,
   Menu,
   MenuItem,
   IconButton as MuiIconButton,
-} from "@mui/material";
+} from '@mui/material';
 
 const IconButton = styled(MuiIconButton)`
   svg {
@@ -28,10 +28,10 @@ function NavbarUserDropdown() {
   };
 
   return (
-    <React.Fragment>
+    <>
       <Tooltip title="Log out">
         <IconButton
-          aria-owns={Boolean(anchorMenu) ? "menu-appbar" : undefined}
+          aria-owns={Boolean(anchorMenu) ? 'menu-appbar' : undefined}
           aria-haspopup="true"
           onClick={toggleMenu}
           color="inherit"
@@ -48,7 +48,7 @@ function NavbarUserDropdown() {
       >
         <MenuItem>Log out</MenuItem>
       </Menu>
-    </React.Fragment>
+    </>
   );
 }
 

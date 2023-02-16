@@ -1,23 +1,23 @@
-import React from "react";
-import { Navigate } from "react-router-dom";
+import React from 'react';
+import { Navigate } from 'react-router-dom';
 
 // Layouts
-import DashboardLayout from "./layouts/Dashboard";
+import DashboardLayout from './layouts/Dashboard';
 
 // Dashboard components
-import Analytics from "./pages/dashboards/Analytics";
+import Analytics from './pages/dashboards/Analytics';
 
 const routes = [
   {
-    path: "/",
+    path: '/',
     element: <Navigate to="/dashboard/analytics" />,
   },
   {
-    path: "dashboard",
+    path: 'dashboard',
     element: <DashboardLayout />,
     children: [
       {
-        path: "analytics",
+        path: 'analytics',
         element: <Analytics />,
       },
     ],

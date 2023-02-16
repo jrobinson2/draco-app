@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "@emotion/styled";
-import { withTheme } from "@emotion/react";
+import React from 'react';
+import styled from '@emotion/styled';
+import { withTheme } from '@emotion/react';
 
-import { Grid, AppBar as MuiAppBar, Toolbar } from "@mui/material";
+import { Grid, AppBar as MuiAppBar, Toolbar } from '@mui/material';
 
-import NavbarUserDropdown from "./NavbarUserDropdown";
+import NavbarUserDropdown from './NavbarUserDropdown';
 
 const AppBar = styled(MuiAppBar)`
   background: ${(props) => props.theme.header.background};
@@ -17,7 +17,7 @@ type NavbarProps = {
 
 const Navbar: React.FC<NavbarProps> = ({ onDrawerToggle }) => {
   return (
-    <React.Fragment>
+    <>
       <AppBar position="sticky" elevation={0}>
         <Toolbar>
           <Grid container alignItems="center" justifyContent="flex-end">
@@ -27,7 +27,7 @@ const Navbar: React.FC<NavbarProps> = ({ onDrawerToggle }) => {
           </Grid>
         </Toolbar>
       </AppBar>
-    </React.Fragment>
+    </>
   );
 };
 

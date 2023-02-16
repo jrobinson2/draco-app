@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "@emotion/styled";
-import { css } from "@emotion/react";
-import { rgba } from "polished";
+import React from 'react';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
+import { rgba } from 'polished';
 
 import {
   Box,
@@ -9,12 +9,12 @@ import {
   CardContent as MuiCardContent,
   Chip as MuiChip,
   Typography as MuiTypography,
-} from "@mui/material";
-import { spacing } from "@mui/system";
+} from '@mui/material';
+import { spacing } from '@mui/system';
 
 const illustrationCardStyle = (props: any) => css`
   ${props.illustration &&
-  props.theme.palette.mode !== "dark" &&
+  props.theme.palette.mode !== 'dark' &&
   `
     background: ${rgba(props.theme.palette.primary.main, 0.125)};
     color: ${props.theme.palette.primary.main};
@@ -57,7 +57,7 @@ const Chip = styled(MuiChip)`
 
 const illustrationPercentageStyle = (props: any) => css`
   ${props.illustration &&
-  props.theme.palette.mode !== "dark" &&
+  props.theme.palette.mode !== 'dark' &&
   `
     color: ${rgba(props.theme.palette.primary.main, 0.85)};
   `}
@@ -86,7 +86,7 @@ const IllustrationImage = styled.img`
   bottom: ${(props) => props.theme.spacing(1)};
   display: none;
 
-  ${(props) => props.theme.breakpoints.between("xs", "lg")} {
+  ${(props) => props.theme.breakpoints.between('xs', 'lg')} {
     display: block;
   }
 

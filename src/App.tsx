@@ -1,16 +1,16 @@
-import React from "react";
-import { useRoutes } from "react-router-dom";
-import { HelmetProvider, Helmet } from "react-helmet-async";
-import { CacheProvider } from "@emotion/react";
+import React from 'react';
+import { useRoutes } from 'react-router-dom';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
+import { CacheProvider } from '@emotion/react';
 
-import { ThemeProvider as MuiThemeProvider } from "@mui/material/styles";
+import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
 
-import createTheme from "./theme";
-import routes from "./routes";
+import createTheme from './theme';
+import routes from './routes';
 
-import useTheme from "./hooks/useTheme";
+import useTheme from './hooks/useTheme';
 
-import createEmotionCache from "./utils/createEmotionCache";
+import createEmotionCache from './utils/createEmotionCache';
 
 const clientSideEmotionCache = createEmotionCache();
 

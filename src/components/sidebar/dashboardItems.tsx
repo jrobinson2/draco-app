@@ -1,16 +1,16 @@
-import { SidebarItemsType } from "../../types/sidebar";
+import { SidebarItemsType } from '../../types/sidebar';
 
-import { Sliders } from "react-feather";
+import { Sliders } from 'react-feather';
 
 const pagesSection = [
   {
-    href: "/dashboard",
+    href: '/dashboard',
     icon: Sliders,
-    title: "Dashboard",
+    title: 'Dashboard',
     children: [
       {
-        href: "/dashboard/analytics",
-        title: "Analytics",
+        href: '/dashboard/analytics',
+        title: 'Analytics',
       },
     ],
   },
@@ -18,7 +18,7 @@ const pagesSection = [
 
 const navItems = [
   {
-    title: "Pages",
+    title: 'Pages',
     pages: pagesSection,
   },
 ];

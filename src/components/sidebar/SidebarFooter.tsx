@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "@emotion/styled";
+import React from 'react';
+import styled from '@emotion/styled';
 
-import { Badge, Grid, Avatar, Typography } from "@mui/material";
+import { Badge, Grid, Avatar, Typography } from '@mui/material';
 
 const Footer = styled.div`
   background-color: ${(props) =>
@@ -42,8 +42,8 @@ const SidebarFooter: React.FC = ({ ...rest }) => {
           <FooterBadge
             overlap="circular"
             anchorOrigin={{
-              vertical: "bottom",
-              horizontal: "right",
+              vertical: 'bottom',
+              horizontal: 'right',
             }}
             variant="dot"
           >

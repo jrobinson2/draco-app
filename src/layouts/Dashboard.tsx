@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from "react";
-import styled from "@emotion/styled";
-import { Outlet, useLocation } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import styled from '@emotion/styled';
+import { Outlet, useLocation } from 'react-router-dom';
 
-import { Box, CssBaseline, Paper as MuiPaper } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import { spacing } from "@mui/system";
+import { Box, CssBaseline, Paper as MuiPaper } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { spacing } from '@mui/system';
 
-import GlobalStyle from "../components/GlobalStyle";
-import Navbar from "../components/navbar/Navbar";
-import dashboardItems from "../components/sidebar/dashboardItems";
-import Sidebar from "../components/sidebar/Sidebar";
-import Footer from "../components/Footer";
+import GlobalStyle from '../components/GlobalStyle';
+import Navbar from '../components/navbar/Navbar';
+import dashboardItems from '../components/sidebar/dashboardItems';
+import Sidebar from '../components/sidebar/Sidebar';
+import Footer from '../components/Footer';
 
 const drawerWidth = 258;
 
@@ -21,7 +21,7 @@ const Root = styled.div`
 `;
 
 const Drawer = styled.div`
-  ${(props) => props.theme.breakpoints.up("md")} {
+  ${(props) => props.theme.breakpoints.up('md')} {
     width: ${drawerWidth}px;
     flex-shrink: 0;
   }
@@ -67,14 +67,14 @@ const Dashboard: React.FC<DashboardType> = ({ children }) => {
   }, [router.pathname]);
 
   const theme = useTheme();
-  const isLgUp = useMediaQuery(theme.breakpoints.up("lg"));
+  const isLgUp = useMediaQuery(theme.breakpoints.up('lg'));
 
   return (
     <Root>
       <CssBaseline />
       <GlobalStyle />
       <Drawer>
-        <Box sx={{ display: { xs: "block", lg: "none" } }}>
+        <Box sx={{ display: { xs: 'block', lg: 'none' } }}>
           <Sidebar
             PaperProps={{ style: { width: drawerWidth } }}
             variant="temporary"
@@ -83,7 +83,7 @@ const Dashboard: React.FC<DashboardType> = ({ children }) => {
             items={dashboardItems}
           />
         </Box>
-        <Box sx={{ display: { xs: "none", md: "block" } }}>
+        <Box sx={{ display: { xs: 'none', md: 'block' } }}>
           <Sidebar
             PaperProps={{ style: { width: drawerWidth } }}
             items={dashboardItems}

@@ -1,8 +1,8 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
+import React from 'react';
+import { useLocation } from 'react-router-dom';
 
-import { SidebarItemsType } from "../../types/sidebar";
-import reduceChildRoutes from "./reduceChildRoutes";
+import { SidebarItemsType } from '../../types/sidebar';
+import reduceChildRoutes from './reduceChildRoutes';
 
 type SidebarNavListProps = {
   depth: number;

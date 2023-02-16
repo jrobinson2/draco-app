@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "@emotion/styled";
+import React from 'react';
+import styled from '@emotion/styled';
 
 import {
   Grid,
@@ -7,7 +7,7 @@ import {
   ListItemText as MuiListItemText,
   ListItemButtonProps as MuiListItemButtonProps,
   ListItemButton as MuiListItemButton,
-} from "@mui/material";
+} from '@mui/material';
 
 interface ListItemButtonProps extends MuiListItemButtonProps {
   component?: string;
@@ -45,7 +45,7 @@ function Footer() {
     <Wrapper>
       <Grid container spacing={0}>
         <Grid
-          sx={{ display: { xs: "none", md: "block" } }}
+          sx={{ display: { xs: 'none', md: 'block' } }}
           container
           item
           xs={12}

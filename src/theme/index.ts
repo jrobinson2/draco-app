@@ -1,11 +1,11 @@
-import "@mui/lab/themeAugmentation";
+import '@mui/lab/themeAugmentation';
 
-import { createTheme as createMuiTheme } from "@mui/material/styles";
-import variants from "./variants";
-import typography from "./typography";
-import breakpoints from "./breakpoints";
-import components from "./components";
-import shadows from "./shadows";
+import { createTheme as createMuiTheme } from '@mui/material/styles';
+import variants from './variants';
+import typography from './typography';
+import breakpoints from './breakpoints';
+import components from './components';
+import shadows from './shadows';
 
 const createTheme = (name: string) => {
   let themeConfig = variants.find((variant) => variant.name === name);

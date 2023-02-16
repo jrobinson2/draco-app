@@ -47,7 +47,7 @@ function Default() {
       <Grid container spacing={6}>
         <Grid item xs={12} sm={12} md={6} lg={3} xl>
           <Stats
-            title="Sales Today"
+            title="Stats"
             amount="2.532"
             chip="Today"
             percentagetext="+26%"
@@ -56,7 +56,7 @@ function Default() {
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={3} xl>
           <Stats
-            title="Visitors"
+            title="Stats"
             amount="170.212"
             chip="Annual"
             percentagetext="-14%"
@@ -65,8 +65,8 @@ function Default() {
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={3} xl>
           <Stats
-            title="Total Earnings"
-            amount="$ 24.300"
+            title="Stats"
+            amount="24.300"
             chip="Monthly"
             percentagetext="+18%"
             percentagecolor={green[500]}
@@ -74,32 +74,15 @@ function Default() {
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={3} xl>
           <Stats
-            title="Pending Orders"
+            title="Stats"
             amount="45"
             chip="Yearly"
             percentagetext="-9%"
             percentagecolor={red[500]}
-            illustration="/static/img/illustrations/waiting.png"
+            illustration="#"
           />
         </Grid>
       </Grid>
-
-      {/* <Grid container spacing={6}>
-        <Grid item xs={12} lg={8}>
-          <LineChart />
-        </Grid>
-        <Grid item xs={12} lg={4}>
-          <DoughnutChart />
-        </Grid>
-      </Grid>
-      <Grid container spacing={6}>
-        <Grid item xs={12} lg={4}>
-          <BarChart />
-        </Grid>
-        <Grid item xs={12} lg={8}>
-          <Table />
-        </Grid>
-      </Grid> */}
     </React.Fragment>
   );
 }

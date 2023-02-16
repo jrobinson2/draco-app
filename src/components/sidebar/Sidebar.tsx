@@ -2,11 +2,9 @@ import React from "react";
 import styled from "@emotion/styled";
 import { NavLink } from "react-router-dom";
 
-import { green } from "@mui/material/colors";
+import { Box, Drawer as MuiDrawer, ListItemButton } from "@mui/material";
 
-import { Box, Chip, Drawer as MuiDrawer, ListItemButton } from "@mui/material";
-
-import { ReactComponent as Logo } from "../../vendor/logo.svg";
+import { ReactComponent as Logo } from "../../vendor/vite.svg";
 import { SidebarItemsType } from "../../types/sidebar";
 import Footer from "./SidebarFooter";
 import SidebarNav from "./SidebarNav";
@@ -52,22 +50,6 @@ const BrandIcon = styled(Logo)`
   height: 32px;
 `;
 
-const BrandChip = styled(Chip)`
-  background-color: ${green[700]};
-  border-radius: 5px;
-  color: ${(props) => props.theme.palette.common.white};
-  font-size: 55%;
-  height: 18px;
-  margin-left: 2px;
-  margin-top: -16px;
-  padding: 3px 0;
-
-  span {
-    padding-left: ${(props) => props.theme.spacing(1.375)};
-    padding-right: ${(props) => props.theme.spacing(1.375)};
-  }
-`;
-
 export type SidebarProps = {
   PaperProps: {
     style: {
@@ -92,10 +74,7 @@ const Sidebar: React.FC<SidebarProps> = ({
   return (
     <Drawer variant="permanent" {...rest}>
       <Brand component={NavLink as any} to="/">
-        <BrandIcon />{" "}
-        <Box ml={1}>
-          Mira <BrandChip label="PRO" />
-        </Box>
+        <BrandIcon /> <Box ml={1}>Tinker</Box>
       </Brand>
       <SidebarNav items={items} />
       {!!showFooter && <Footer />}

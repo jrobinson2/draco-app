@@ -14,8 +14,6 @@ import {
 
 import { Menu as MenuIcon } from "@mui/icons-material";
 
-import NavbarNotificationsDropdown from "./NavbarNotificationsDropdown";
-import NavbarMessagesDropdown from "./NavbarMessagesDropdown";
 import NavbarUserDropdown from "./NavbarUserDropdown";
 
 const AppBar = styled(MuiAppBar)`
@@ -84,30 +82,8 @@ const Navbar: React.FC<NavbarProps> = ({ onDrawerToggle }) => {
     <React.Fragment>
       <AppBar position="sticky" elevation={0}>
         <Toolbar>
-          <Grid container alignItems="center">
-            <Grid item sx={{ display: { xs: "block", md: "none" } }}>
-              <IconButton
-                color="inherit"
-                aria-label="Open drawer"
-                onClick={onDrawerToggle}
-                size="large"
-              >
-                <MenuIcon />
-              </IconButton>
-            </Grid>
+          <Grid container alignItems="center" justifyContent="flex-end">
             <Grid item>
-              <Search>
-                <SearchIconWrapper>
-                  <SearchIcon />
-                </SearchIconWrapper>
-                {/* @ts-ignore */}
-                <Input placeholder={"Search"} />
-              </Search>
-            </Grid>
-            <Grid item xs />
-            <Grid item>
-              <NavbarMessagesDropdown />
-              <NavbarNotificationsDropdown />
               <NavbarUserDropdown />
             </Grid>
           </Grid>

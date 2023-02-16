@@ -47,15 +47,12 @@ const SidebarFooter: React.FC = ({ ...rest }) => {
             }}
             variant="dot"
           >
-            <Avatar
-              alt="Lucy Lavender"
-              src="/static/img/avatars/avatar-1.jpg"
-            />
+            <Avatar alt="Riri Williams" src="#" />
           </FooterBadge>
         </Grid>
         <Grid item>
-          <FooterText variant="body2">Lucy Lavender</FooterText>
-          <FooterSubText variant="caption">UX Designer</FooterSubText>
+          <FooterText variant="body2">Riri Williams</FooterText>
+          <FooterSubText variant="caption">Ironheart</FooterSubText>
         </Grid>
       </Grid>
     </Footer>

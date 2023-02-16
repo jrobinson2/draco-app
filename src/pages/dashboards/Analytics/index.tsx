@@ -24,10 +24,13 @@ function Default() {
       <Grid justifyContent="space-between" container spacing={6}>
         <Grid item>
           <Typography variant="h3" gutterBottom>
-            Default Dashboard
+            Analytics Dashboard
           </Typography>
           <Typography variant="subtitle1">
-            {"Welcome back"}, Lucy! {"We've missed you"}.{" "}
+            <span role="img" aria-label="Robot">
+              🤖
+            </span>{" "}
+            Hello
             <span role="img" aria-label="Waving Hand Sign">
               👋
             </span>

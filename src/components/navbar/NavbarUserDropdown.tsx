@@ -29,7 +29,7 @@ function NavbarUserDropdown() {
 
   return (
     <React.Fragment>
-      <Tooltip title="Account">
+      <Tooltip title="Log out">
         <IconButton
           aria-owns={Boolean(anchorMenu) ? "menu-appbar" : undefined}
           aria-haspopup="true"
@@ -46,8 +46,7 @@ function NavbarUserDropdown() {
         open={Boolean(anchorMenu)}
         onClose={closeMenu}
       >
-        <MenuItem>Profile</MenuItem>
-        <MenuItem>Sign out</MenuItem>
+        <MenuItem>Log out</MenuItem>
       </Menu>
     </React.Fragment>
   );

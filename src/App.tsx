@@ -22,10 +22,7 @@ function App({ emotionCache = clientSideEmotionCache }) {
   return (
     <CacheProvider value={emotionCache}>
       <HelmetProvider>
-        <Helmet
-          titleTemplate="%s | Mira"
-          defaultTitle="Mira - React Material Admin Dashboard"
-        />
+        <Helmet titleTemplate="%s | Tinker" defaultTitle="Tinker Dashboard" />
         <MuiThemeProvider theme={createTheme(theme)}>
           {content}
         </MuiThemeProvider>

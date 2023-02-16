@@ -48,36 +48,36 @@ function Default() {
         <Grid item xs={12} sm={12} md={6} lg={3} xl>
           <Stats
             title="Stats"
-            amount="2.532"
+            amount="2.5"
             chip="Today"
-            percentagetext="+26%"
+            percentagetext="+10%"
             percentagecolor={green[500]}
           />
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={3} xl>
           <Stats
             title="Stats"
-            amount="170.212"
-            chip="Annual"
-            percentagetext="-14%"
+            amount="2.5"
+            chip="Today"
+            percentagetext="-10%"
             percentagecolor={red[500]}
           />
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={3} xl>
           <Stats
             title="Stats"
-            amount="24.300"
-            chip="Monthly"
-            percentagetext="+18%"
+            amount="2.5"
+            chip="Today"
+            percentagetext="+10%"
             percentagecolor={green[500]}
           />
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={3} xl>
           <Stats
             title="Stats"
-            amount="45"
-            chip="Yearly"
-            percentagetext="-9%"
+            amount="2.5"
+            chip="Today"
+            percentagetext="-10%"
             percentagecolor={red[500]}
             illustration="#"
           />

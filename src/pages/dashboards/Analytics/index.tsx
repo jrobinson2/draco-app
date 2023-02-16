@@ -11,11 +11,7 @@ import { spacing } from "@mui/system";
 import { green, red } from "@mui/material/colors";
 
 import Actions from "./Actions";
-import BarChart from "./BarChart";
-import LineChart from "./LineChart";
-import DoughnutChart from "./DoughnutChart";
 import Stats from "./Stats";
-import Table from "./Table";
 
 const Divider = styled(MuiDivider)(spacing);
 

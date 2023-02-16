@@ -4,10 +4,10 @@ import { withTheme } from "@emotion/react";
 import { Doughnut } from "react-chartjs-2";
 import { MoreVertical } from "react-feather";
 
-import { green, red, orange } from "@mui/material/colors";
+import { orange, green, red } from "@mui/material/colors";
 import {
   Card as MuiCard,
-  CardContent as MuiCardContent,
+  CardContent,
   CardHeader,
   IconButton,
   Table,
@@ -22,12 +22,6 @@ import { spacing } from "@mui/system";
 import { ThemeProps } from "../../../types/theme";
 
 const Card = styled(MuiCard)(spacing);
-
-const CardContent = styled(MuiCardContent)`
-  &:last-child {
-    padding-bottom: ${(props) => props.theme.spacing(2)};
-  }
-`;
 
 const ChartWrapper = styled.div`
   height: 168px;
@@ -46,11 +40,6 @@ const DoughnutInner = styled.div`
 
 const TableRow = styled(MuiTableRow)`
   height: 42px;
-
-  &:last-child th,
-  &:last-child td {
-    border-bottom: 0;
-  }
 `;
 
 const TableCell = styled(MuiTableCell)`
@@ -73,8 +62,13 @@ const DoughnutChart = ({ theme }: ThemeProps) => {
     labels: ["Social", "Search Engines", "Direct", "Other"],
     datasets: [
       {
-        data: [260, 125, 164],
-        backgroundColor: [theme.palette.secondary.main, red[500], orange[500]],
+        data: [260, 125, 54, 146],
+        backgroundColor: [
+          theme.palette.secondary.main,
+          red[500],
+          orange[500],
+          theme.palette.grey[200],
+        ],
         borderWidth: 5,
         borderColor: theme.palette.background.paper,
       },
@@ -99,14 +93,14 @@ const DoughnutChart = ({ theme }: ThemeProps) => {
             <MoreVertical />
           </IconButton>
         }
-        title="Source / Medium"
+        title="Weekly sales"
       />
 
       <CardContent>
         <ChartWrapper>
           <DoughnutInner>
-            <Typography variant="h4">+23%</Typography>
-            <Typography variant="caption">new visitors</Typography>
+            <Typography variant="h4">+27%</Typography>
+            <Typography variant="caption">more sales</Typography>
           </DoughnutInner>
           <Doughnut data={data} options={options} />
         </ChartWrapper>
@@ -141,9 +135,18 @@ const DoughnutChart = ({ theme }: ThemeProps) => {
               <TableCell component="th" scope="row">
                 Direct
               </TableCell>
-              <TableCell align="right">164</TableCell>
+              <TableCell align="right">54</TableCell>
               <TableCell align="right">
                 <GreenText>+46%</GreenText>
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell component="th" scope="row">
+                Other
+              </TableCell>
+              <TableCell align="right">146</TableCell>
+              <TableCell align="right">
+                <GreenText>+24%</GreenText>
               </TableCell>
             </TableRow>
           </TableBody>

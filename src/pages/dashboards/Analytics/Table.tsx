@@ -5,9 +5,9 @@ import { MoreVertical } from "react-feather";
 import {
   Card as MuiCard,
   CardHeader,
-  Chip as MuiChip,
   IconButton,
-  Paper,
+  Chip as MuiChip,
+  Paper as MuiPaper,
   Table,
   TableBody,
   TableCell,
@@ -27,6 +27,8 @@ const Chip = styled(MuiChip)<{ color: string }>`
   color: ${(props) => props.theme.palette.common.white};
 `;
 
+const Paper = styled(MuiPaper)(spacing);
+
 const TableWrapper = styled.div`
   overflow-y: auto;
   max-width: calc(100vw - ${(props) => props.theme.spacing(12)});
@@ -34,59 +36,59 @@ const TableWrapper = styled.div`
 
 // Data
 let id = 0;
-const createData = (
-  source: string,
-  users: string,
-  sessions: string,
-  bounce: JSX.Element,
-  avg: string
-) => {
+function createData(
+  name: string,
+  start: string,
+  end: string,
+  state: JSX.Element,
+  assignee: string
+) {
   id += 1;
-  return { id, source, users, sessions, bounce, avg };
-};
+  return { id, name, start, end, state, assignee };
+}
 
 const rows = [
   createData(
-    "Google",
-    "1023",
-    "1265",
-    <Chip label="30%" color="success" />,
-    "00:06:25"
+    "Project Aurora",
+    "01/01/2023",
+    "31/06/2023",
+    <Chip label="Done" color="success" />,
+    "James Dalton"
   ),
   createData(
-    "Direct",
-    "872",
-    "1077",
-    <Chip label="63%" color="error" />,
-    "00:09:18"
+    "Project Eagle",
+    "01/01/2023",
+    "31/06/2023",
+    <Chip label="In Progress" color="warning" />,
+    "Tracy Mack"
   ),
   createData(
-    "Twitter",
-    "812",
-    "1003",
-    <Chip label="28%" color="success" />,
-    "00:05:56"
+    "Project Fireball",
+    "01/01/2023",
+    "31/06/2023",
+    <Chip label="Done" color="success" />,
+    "Sallie Love"
   ),
   createData(
-    "GitHub",
-    "713",
-    "881",
-    <Chip label="22%" color="success" />,
-    "00:06:19"
+    "Project Omega",
+    "01/01/2023",
+    "31/06/2023",
+    <Chip label="Cancelled" color="error" />,
+    "Glenda Jang"
   ),
   createData(
-    "DuckDuckGo",
-    "693",
-    "856",
-    <Chip label="56%" color="error" />,
-    "00:09:12"
+    "Project Yoda",
+    "01/01/2023",
+    "31/06/2023",
+    <Chip label="Done" color="success" />,
+    "Raymond Ennis"
   ),
   createData(
-    "Facebook",
-    "623",
-    "770",
-    <Chip label="20%" color="success" />,
-    "00:04:42"
+    "Project Zulu",
+    "01/01/2023",
+    "31/06/2023",
+    <Chip label="Done" color="success" />,
+    "Matthew Winters"
   ),
 ];
 
@@ -98,31 +100,30 @@ const DashboardTable = () => (
           <MoreVertical />
         </IconButton>
       }
-      title="Traffic sources"
+      title="Latest projects"
     />
-
     <Paper>
       <TableWrapper>
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell>Source</TableCell>
-              <TableCell align="right">Users</TableCell>
-              <TableCell align="right">Sessions</TableCell>
-              <TableCell align="right">Bounce Rate</TableCell>
-              <TableCell align="right">Avg. Session Duration</TableCell>
+              <TableCell>Name</TableCell>
+              <TableCell>Start Date</TableCell>
+              <TableCell>End Date</TableCell>
+              <TableCell>State</TableCell>
+              <TableCell>Assignee</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {rows.map((row) => (
               <TableRow key={row.id}>
                 <TableCell component="th" scope="row">
-                  {row.source}
+                  {row.name}
                 </TableCell>
-                <TableCell align="right">{row.users}</TableCell>
-                <TableCell align="right">{row.sessions}</TableCell>
-                <TableCell align="right">{row.bounce}</TableCell>
-                <TableCell align="right">{row.avg}</TableCell>
+                <TableCell>{row.start}</TableCell>
+                <TableCell>{row.end}</TableCell>
+                <TableCell>{row.state}</TableCell>
+                <TableCell>{row.assignee}</TableCell>
               </TableRow>
             ))}
           </TableBody>

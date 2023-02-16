@@ -35,7 +35,6 @@ const FooterBadge = styled(Badge)`
 `;
 
 const SidebarFooter: React.FC = ({ ...rest }) => {
-
   return (
     <Footer {...rest}>
       <Grid container spacing={2}>
@@ -55,7 +54,7 @@ const SidebarFooter: React.FC = ({ ...rest }) => {
           </FooterBadge>
         </Grid>
         <Grid item>
-          <FooterText variant="body2">Lucy Lavender</FooterText>}
+          <FooterText variant="body2">Lucy Lavender</FooterText>
           <FooterSubText variant="caption">UX Designer</FooterSubText>
         </Grid>
       </Grid>

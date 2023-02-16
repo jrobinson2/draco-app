@@ -1,38 +1,24 @@
 import React from "react";
-
-import async from "./components/Async";
-
-// All pages that rely on 3rd party components (other than MUI) are
-// loaded asynchronously, to keep the initial JS bundle to a minimum size
+import { Navigate } from "react-router-dom";
 
 // Layouts
 import DashboardLayout from "./layouts/Dashboard";
-import PresentationLayout from "./layouts/Presentation";
-
-// Landing
-import Landing from "./pages/presentation/Landing";
 
 // Dashboard components
-const Default = async(() => import("./pages/dashboards/Default"));
+import Analytics from "./pages/dashboards/Analytics";
 
 const routes = [
   {
     path: "/",
-    element: <PresentationLayout />,
-    children: [
-      {
-        path: "",
-        element: <Landing />,
-      },
-    ],
+    element: <Navigate to="/dashboard/analytics" />,
   },
   {
     path: "dashboard",
     element: <DashboardLayout />,
     children: [
       {
-        path: "default",
-        element: <Default />,
+        path: "analytics",
+        element: <Analytics />,
       },
     ],
   },

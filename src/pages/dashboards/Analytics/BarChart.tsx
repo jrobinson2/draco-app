@@ -7,7 +7,7 @@ import { rgba } from "polished";
 
 import {
   Card as MuiCard,
-  CardContent as MuiCardContent,
+  CardContent,
   CardHeader,
   IconButton,
 } from "@mui/material";
@@ -17,14 +17,8 @@ import { ThemeProps } from "../../../types/theme";
 
 const Card = styled(MuiCard)(spacing);
 
-const CardContent = styled(MuiCardContent)`
-  &:last-child {
-    padding-bottom: ${(props) => props.theme.spacing(4)};
-  }
-`;
-
 const ChartWrapper = styled.div`
-  height: 240px;
+  height: 340px;
   width: 100%;
 `;
 
@@ -55,7 +49,7 @@ const BarChart = ({ theme }: ThemeProps) => {
         hoverBackgroundColor: firstDatasetColor,
         hoverBorderColor: firstDatasetColor,
         data: [54, 67, 41, 55, 62, 45, 55, 73, 60, 76, 48, 79],
-        barPercentage: 0.4,
+        barPercentage: 0.5,
         categoryPercentage: 0.5,
       },
       {
@@ -65,7 +59,7 @@ const BarChart = ({ theme }: ThemeProps) => {
         hoverBackgroundColor: secondDatasetColor,
         hoverBorderColor: secondDatasetColor,
         data: [69, 66, 24, 48, 52, 51, 44, 53, 62, 79, 51, 68],
-        barPercentage: 0.4,
+        barPercentage: 0.5,
         categoryPercentage: 0.5,
         borderRadius: 6,
       },
@@ -85,8 +79,11 @@ const BarChart = ({ theme }: ThemeProps) => {
           display: false,
         },
         stacked: true,
+        ticks: {
+          stepSize: 20,
+          fontColor: theme.palette.text.secondary,
+        },
       },
-
       x: {
         stacked: true,
         grid: {
@@ -106,6 +103,7 @@ const BarChart = ({ theme }: ThemeProps) => {
         }
         title="Mobile / Desktop"
       />
+
       <CardContent>
         <ChartWrapper>
           <Bar data={data} options={options} />

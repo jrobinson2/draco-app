@@ -12,8 +12,6 @@ import {
 } from "@mui/material";
 import { spacing } from "@mui/system";
 
-const Typography = styled(MuiTypography)(spacing);
-
 const illustrationCardStyle = (props: any) => css`
   ${props.illustration &&
   props.theme.palette.mode !== "dark" &&
@@ -25,9 +23,12 @@ const illustrationCardStyle = (props: any) => css`
 
 const Card = styled(MuiCard)<{ illustration?: string }>`
   position: relative;
+  margin-bottom: ${(props) => props.theme.spacing(6)};
 
   ${illustrationCardStyle}
 `;
+
+const Typography = styled(MuiTypography)(spacing);
 
 const CardContent = styled(MuiCardContent)`
   position: relative;
@@ -79,7 +80,7 @@ const Percentage = styled(MuiTypography)<{
 `;
 
 const IllustrationImage = styled.img`
-  height: 120px;
+  height: 100px;
   position: absolute;
   right: ${(props) => props.theme.spacing(1)};
   bottom: ${(props) => props.theme.spacing(1)};
@@ -89,7 +90,7 @@ const IllustrationImage = styled.img`
     display: block;
   }
 
-  @media (min-width: 1700px) {
+  @media (min-width: 1600px) {
     display: block;
   }
 `;
@@ -114,10 +115,10 @@ const Stats: React.FC<StatsProps> = ({
   return (
     <Card illustration={illustration}>
       <CardContent>
-        <Typography variant="h6" mb={6}>
+        <Typography variant="h6" mb={4}>
           {title}
         </Typography>
-        <Typography variant="h3" mb={6}>
+        <Typography variant="h3" mb={3}>
           <Box fontWeight="fontWeightRegular">{amount}</Box>
         </Typography>
         <Percentage
@@ -126,7 +127,7 @@ const Stats: React.FC<StatsProps> = ({
           percentagecolor={percentagecolor}
           illustration={illustration}
         >
-          <span>{percentagetext}</span> Since last week
+          <span>{percentagetext}</span> Since last month
         </Percentage>
         {!illustration && <Chip label={chip} />}
       </CardContent>

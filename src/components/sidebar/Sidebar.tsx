@@ -64,15 +64,17 @@ export type SidebarProps = {
     pages: SidebarItemsType[];
   }[];
   showFooter?: boolean;
+  anchor?: 'bottom' | 'left' | 'right' | 'top' | undefined;
 };
 
 const Sidebar: React.FC<SidebarProps> = ({
   items,
   showFooter = true,
+  anchor,
   ...rest
 }) => {
   return (
-    <Drawer variant="permanent" {...rest}>
+    <Drawer variant="permanent" anchor={anchor} {...rest}>
       <Brand component={NavLink as any} to="/">
         <BrandIcon /> <Box ml={1}>Tinker</Box>
       </Brand>

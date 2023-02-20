@@ -9,8 +9,9 @@ import {
   IconButton as MuiIconButton,
 } from '@mui/material';
 
-import { Menu as MenuIcon } from '@mui/icons-material';
+import { Menu as MenuIcon, ExpandMore } from '@mui/icons-material';
 
+import NavbarNotificationsDropdown from './NavbarNotificationsDropdown';
 import NavbarUserDropdown from './NavbarUserDropdown';
 
 const AppBar = styled(MuiAppBar)`
@@ -35,7 +36,7 @@ const Navbar: React.FC<NavbarProps> = ({ onDrawerToggle }) => {
       <AppBar position="sticky" elevation={0}>
         <Toolbar>
           <Grid container alignItems="center">
-            <Grid item sx={{ display: { xs: 'block', md: 'none' } }}>
+            <Grid item sx={{ display: { xs: 'block', lg: 'none' } }}>
               <IconButton
                 color="inherit"
                 aria-label="Open drawer"
@@ -45,8 +46,19 @@ const Navbar: React.FC<NavbarProps> = ({ onDrawerToggle }) => {
                 <MenuIcon />
               </IconButton>
             </Grid>
+            <Grid item sx={{ display: { xs: 'none', lg: 'block' } }}>
+              <IconButton
+                color="inherit"
+                aria-label="Open drawer"
+                onClick={onDrawerToggle}
+                size="large"
+              >
+                <ExpandMore />
+              </IconButton>
+            </Grid>
             <Grid item xs />
             <Grid item>
+              <NavbarNotificationsDropdown />
               <NavbarUserDropdown />
             </Grid>
           </Grid>

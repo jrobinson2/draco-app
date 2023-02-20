@@ -5,12 +5,13 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { Box, CssBaseline, Paper as MuiPaper } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { spacing } from '@mui/system';
+import { display, spacing } from '@mui/system';
 
 import GlobalStyle from '../components/GlobalStyle';
 import Navbar from '../components/navbar/Navbar';
 import dashboardItems from '../components/sidebar/dashboardItems';
 import Sidebar from '../components/sidebar/Sidebar';
+import Notifications from '../components/notifications/Notifications';
 import Footer from '../components/Footer';
 
 const drawerWidth = 258;
@@ -21,7 +22,7 @@ const Root = styled.div`
 `;
 
 const Drawer = styled.div`
-  ${(props) => props.theme.breakpoints.up('md')} {
+  ${(props) => props.theme.breakpoints.up('lg')} {
     width: ${drawerWidth}px;
     flex-shrink: 0;
   }
@@ -83,7 +84,7 @@ const Dashboard: React.FC<DashboardType> = ({ children }) => {
             items={dashboardItems}
           />
         </Box>
-        <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+        <Box sx={{ display: { xs: 'none', lg: 'block' } }}>
           <Sidebar
             PaperProps={{ style: { width: drawerWidth } }}
             items={dashboardItems}
@@ -98,6 +99,25 @@ const Dashboard: React.FC<DashboardType> = ({ children }) => {
         </MainContent>
         <Footer />
       </AppContent>
+      <Drawer>
+        <Box sx={{ display: { xs: 'block', lg: 'none' } }}>
+          <Notifications
+            PaperProps={{ style: { width: drawerWidth } }}
+            variant="temporary"
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+            items={dashboardItems}
+            anchor="right"
+          />
+        </Box>
+        <Box sx={{ display: { xs: 'none', lg: 'block' } }}>
+          <Notifications
+            PaperProps={{ style: { width: drawerWidth } }}
+            items={dashboardItems}
+            anchor="right"
+          />
+        </Box>
+      </Drawer>
     </Root>
   );
 };

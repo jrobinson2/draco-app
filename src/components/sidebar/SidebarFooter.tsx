@@ -47,7 +47,10 @@ const SidebarFooter: React.FC = ({ ...rest }) => {
             }}
             variant="dot"
           >
-            <Avatar alt="Riri Williams" src="#" />
+            <Avatar
+              alt="Riri Williams"
+              src="https://cdn.shopify.com/s/files/1/0336/2894/6571/products/Ironheart_21_946x673.jpg?v=1646407782"
+            />
           </FooterBadge>
         </Grid>
         <Grid item>
